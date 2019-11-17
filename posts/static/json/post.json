@@ -1,0 +1,170 @@
+{
+    "code": 200,
+    "description": "success",
+    "data": {
+        "posts": [
+            {
+                "user": {
+                    "username": "ali.kheir",
+                    "url": "slug",
+                    "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                },
+                "image": "img/60450661_2376164995975286_6308187267627809876_n.jpg",
+                "location": "Example Location",
+                "caption": "Love these sunsets",
+                "date": "16/11/2019",
+                "comment": true,
+                "comments": [
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "comment": "test"
+                    },
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "comment": "test"
+                    },
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "comment": "test"
+                    },
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "comment": "test"
+                    },
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "comment": "test"
+                    },
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "comment": "test"
+                    },
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "comment": "test"
+                    }
+                ],
+                "likes": [
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "date": "16/11/2019"
+                    },
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "date": "16/11/2019"
+                    },
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "date": "16/11/2019"
+                    },
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "date": "16/11/2019"
+                    },
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "date": "16/11/2019"
+                    },
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "date": "16/11/2019"
+                    },
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "date": "16/11/2019"
+                    }
+                ],
+                "liked": true
+            },
+            {
+                "user": {
+                    "username": "ali.kheir",
+                    "url": "slug",
+                    "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                },
+                "image": "img/60450661_2376164995975286_6308187267627809876_n.jpg",
+                "location": "Example Location1",
+                "caption": "Sunset in the wild",
+                "date": "16/11/2019",
+                "comment": true,
+                "comments": [
+                    {
+                        "user": {
+                            "username": "jane.doe",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "comment": "sooo niceeee"
+                    }
+                ],
+                "likes": [
+                    {
+                        "user": {
+                            "username": "ali.kheir",
+                            "url": "slug",
+                            "avatar": "img/42002584_995628447264876_5615867123332022272_n.jpg"
+                        },
+                        "date": "16/11/2019"
+                    }
+                ],
+                "liked": false
+            }
+        ]
+    }
+}

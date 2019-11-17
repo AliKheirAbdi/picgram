@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Picgram</title>
+
+    <link rel="stylesheet" href="{% static 'dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sprite.css' %}">
+    <link rel="stylesheet" href="{% static 'css/post.css' %}">
+    <link rel="stylesheet" href="{% static 'css/new.css' %}">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar fixed-top navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <span class="d-inline-block sprite-header-image-logo"></span>
+                    <div class="d-inline-block header-image-border"></div>
+                    <span class="d-inline-block sprite-header-image-text"></span>
+                </a>
+                <div class="navbar-nav ml-auto d-none d-lg-block">
+                    <div class="row">
+                        <div class="col"><a class="nav-link" href="{% url 'home' %}"><span
+                                    class="d-inline-block sprite-header-home"></span></a></div>
+                        <div class="col"><a class="nav-link" href="{% url 'new-post' %}"><span
+                                    class="d-inline-block sprite-header-new"></span></a></div>
+                        <div class="col"><a class="nav-link" href="#"><span
+                                    class="d-inline-block sprite-header-like"></span></a></div>
+                        <div class="col"><a class="nav-link" href="{% url 'profile' user.slug %}"><span
+                                    class="d-inline-block sprite-header-profile"></span></a></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="content container">
+        <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <form>
+                            <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false" class="ml-2">
+                                <div id="drag_upload_file">
+                                    <br>
+                                    <p>Select your image</p>
+                                    <p><input type="button" class="btn" value="Select File" onclick="file_explorer();">
+                                    </p>
+                                    <input type="file" id="selectfile" name="image" accept="image/*" onchange="loadFile(event)">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-3 col-lg-1">
+                        <img id="output" class="new-preview"
+                            src="/media/posts/default.jpg" alt="" />
+                    </div>
+                    <div class="col-9 col-lg-11">
+                        <textarea class="form-control new-caption-textarea" name="caption"  maxlength="100" id="caption" cols="30"
+                            rows="10" placeholder="Tell us more about this photo....."></textarea>
+                    </div>
+                </div>
+                <hr>
+                
+                <hr>
+                <div class="row mt-5">
+                    <div class="col">
+                        <button class="btn btn-primary btn-new float-right ml-2" type="submit">Share</button>
+                        <button class="btn btn-secondary btn-new float-right">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="d-lg-none fixed-bottom">
+            <div class="card container footer-nav">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-2">
+                            <span class="d-block sprite-footer-nav-home-before"></span>
+                        </div>
+                        <div class="col-2">
+                            <span class="d-block sprite-footer-nav-search-before"></span>
+                        </div>
+                        <div class="col-2">
+                            <span class="d-block sprite-footer-nav-new-before"></span>
+                        </div>
+                        <div class="col-2">
+                            <span class="d-block sprite-footer-nav-like-before"></span>
+                        </div>
+                        <div class="col-2">
+                            <img src="" alt=""
+                                class="d-block footer-nav-profile rounded-circle" href="#">
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </form>
+    </section>
+
+
+    <script src="{% static 'dist/js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/ajax.js' %}"></script>
+
+    <script src="{% static 'js/users.js' %}"></script>
+    <script src="{% static 'js/user.js' %}"></script>
+    <script src="{% static 'js/posts.js' %}"></script>
+    <script src="{% static 'js/post.js' %}"></script>
+    <script src="{% static 'js/locations.js' %}"></script>
+    <script src="{% static 'js/location.js' %}"></script>
+
+    <script src="{% static 'js/file-upload.js' %}"></script>
+
+    <script>
+        $(document).ready(function(){
+            requestLocationList(function(list){
+                fillLocationSelection(list);
+            })
+        })
+    </script>
+</body>
+
+</html>
